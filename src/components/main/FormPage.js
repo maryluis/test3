@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { MainWrapper, FormWrapper, LightTitle, ButtonForm, FlexDiv, StyledInput, StyledTextArea, StyledLabel } from '.';
 import { postNew, URL_NEWS, editNews, makeIdUrl } from '../../tools';
-import { actionDeleteData, actionTakeData } from '../../reduxDir';
+import { actionDeleteData } from '../../reduxDir';
 
 export class FormPage extends React.Component {
   constructor(props) {
@@ -55,7 +55,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   removeData: actionDeleteData,
-  editData: actionTakeData,
 }, dispatch);
 
 export const CFormPage = connect(mapStateToProps, mapDispatchToProps)(FormPage);

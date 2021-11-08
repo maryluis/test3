@@ -54,9 +54,10 @@ padding: 20px;
 box-sizing: border-box;
 min-height: 400px;
 background-color: ${props => props.color || props.theme.colors.primaryDark};
-width: 100%;\
+width: 100%;
+flex-wrap: wrap;
 @media (max-width: 1100px) {
-    flex-wrap: wrap;
+
   }
   @media (max-width: 400px) {
     padding:0;
