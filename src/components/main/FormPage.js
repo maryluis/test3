@@ -37,7 +37,7 @@ export class FormPage extends React.Component {
           <StyledLabel to="Text"> Описание</StyledLabel>
           <StyledTextArea onChange={(e) => this.handleChanges(e, 'text')} placeholder="text" value={this.state.text} />
         </FlexDiv>
-        <ButtonForm onClick={() => this.clickHandler(this.state)}> Сохранить </ButtonForm>
+        <ButtonForm disabled={!this.state.title || !this.state.text} onClick={() => this.clickHandler(this.state)}> Сохранить </ButtonForm>
       </MainWrapper>
     );
   }
