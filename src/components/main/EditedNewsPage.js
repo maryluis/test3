@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { MainWrapper, LightTitle, CardDiv, DarkTitle, DarkText } from '.';
+import { MainWrapper, LightTitle, CardDiv, DarkTitle, DarkText, FormWrapper } from '.';
 
 export class EditedNewsPage extends React.Component {
   constructor(props) {
@@ -12,14 +12,16 @@ export class EditedNewsPage extends React.Component {
 
   render() {
     return (
-      <MainWrapper direction="column" align="center">
+      <MainWrapper direction="column" align="center" justify="auto">
         <LightTitle>{this.title}</LightTitle>
-        {!this.isEmpty && (
-        <CardDiv>
-          <DarkTitle>{this.props.data.title}</DarkTitle>
-          <DarkText>{this.props.data.text}</DarkText>
-        </CardDiv>
-        )}
+        <FormWrapper>
+          {!this.isEmpty && (
+            <CardDiv>
+              <DarkTitle>{this.props.data.title}</DarkTitle>
+              <DarkText>{this.props.data.text}</DarkText>
+            </CardDiv>
+          )}
+        </FormWrapper>
       </MainWrapper>
     );
   }

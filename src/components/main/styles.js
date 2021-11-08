@@ -58,6 +58,9 @@ width: 100%;\
 @media (max-width: 650px) {
     flex-wrap: wrap;
   }
+  @media (max-width: 400px) {
+    padding:0;
+  }
 `;
 export const StyledMain = styled.main`
 min-height: calc(100vh - 40px);
@@ -68,6 +71,10 @@ background-color: ${props => props.color || props.theme.colors.primaryDark};
 
 export const Iframe = styled.iframe`
 padding: 0px 5px 0px 0px;
+@media (max-width: 500px) {
+    width: 90%;
+    box-sizing: border-box;
+  }
 `;
 
 export const CardDiv = styled.div`
@@ -77,7 +84,7 @@ width: 400px;
 max-height: 400px;
 background-color: ${props => props.color || props.theme.colors.primaryLight};
 color: ${props => props.color || props.theme.colors.primaryDark};
-margin: 10px;
+margin: 30px;
 padding: 10px;
 align-items: center;
 justify-content: space-between;
@@ -86,6 +93,11 @@ border-radius: 8px;
     transform: scale(1.1); 
     transition: 0.3s;
 }
+@media (max-width: 500px) {
+    max-height: 800px;
+    width: 90%;
+    box-sizing: border-box;
+  }
 `;
 
 export const DarkTitle = styled.h3`
@@ -105,6 +117,9 @@ width: 300px;
 margin: 5px;
 border-sizing: border-box;
 color: ${props => props.color || props.theme.colors.primaryDark};
+@media (max-width: 430px) {
+    width: 100%;
+  }
 `;
 
 export const StyledTextArea = styled.textarea`
@@ -113,16 +128,27 @@ width: 300px;
 margin: 5px;
 border-sizing: border-box;
 color: ${props => props.color || props.theme.colors.primaryDark};
+@media (max-width: 430px) {
+    width: 100%;
+  }
 `;
 
 export const StyledLabel = styled.label`
 color: ${props => props.color || props.theme.colors.primaryLight};
 line-height: 2.2;
 margin: 5px;
+@media (max-width: 430px) {
+    width: 100%;
+  }
 `;
 
 export const FlexDiv = styled.div`
+flex-direction: ${props => props.direction || 'auto'}; 
 display: flex;
+@media (max-width: 430px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const ButtonForm = styled.button`
@@ -135,11 +161,18 @@ max-width: 120px;
 export const LightTitle = styled.h3`
 color: ${props => props.color || props.theme.colors.primaryLight};
 position: relative;
+@media (max-width: 430px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 export const FormWrapper = styled.div`
 width: 500px;
 display: flex;
 flex-direction: column;
-align-items: center
+align-items: center;
+@media (max-width: 650px) {
+    width: auto;
+  }
 `;
