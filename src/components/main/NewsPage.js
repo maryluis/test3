@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { actionGetData, actionSaveData } from '../../reduxDir';
 import { MainWrapper, CardDiv, DarkText, DarkTitle, ButtonForm } from '.';
-import * as _ from 'lodash'
 
 export class NewsPage extends React.Component {
   constructor(props) {

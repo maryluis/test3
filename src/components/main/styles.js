@@ -23,9 +23,11 @@ border: 3px solid ${props => props.color || props.theme.colors.primaryLight};
     animation: ${rotateAnima} 1s infinite linear;
 }
 @media (max-width: 650px) {
-    position: relative;
-    top:25px;
-    right: auto;
+    position: static;
+    margin-top: 50px;
+  }
+  @media (max-width: 620px) {
+    margin-top: 10px;
   }
 `;
 
@@ -62,12 +64,9 @@ min-height: calc(100vh - 40px);
 display: flex;
 justify-content: center;
 background-color: ${props => props.color || props.theme.colors.primaryDark};
-overflow: hidden;
 `;
 
 export const Iframe = styled.iframe`
-width: 300px;
-height: 250px;
 padding: 0px 5px 0px 0px;
 `;
 
