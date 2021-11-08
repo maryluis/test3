@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { MainWrapper, LightTitle, ButtonForm, FlexDiv, StyledInput, StyledTextArea, StyledLabel } from '.';
+import { MainWrapper, FormWrapper, LightTitle, ButtonForm, FlexDiv, StyledInput, StyledTextArea, StyledLabel } from '.';
 import { actionDeleteData, actionTakeData } from '../../reduxDir';
 
 export class FormPage extends React.Component {
@@ -28,16 +28,18 @@ export class FormPage extends React.Component {
   render() {
     return (
       <MainWrapper direction="column" align="center">
-        <LightTitle left="50px">{this.isEmpty ? 'Создание' : 'Редактирование'} новости</LightTitle>
-        <FlexDiv>
-          <StyledLabel to="Title"> Название </StyledLabel>
-          <StyledInput onChange={(e) => this.handleChanges(e, 'title')} placeholder="title" id="Title" value={this.state.title} />
-        </FlexDiv>
-        <FlexDiv>
-          <StyledLabel to="Text"> Описание</StyledLabel>
-          <StyledTextArea onChange={(e) => this.handleChanges(e, 'text')} placeholder="text" value={this.state.text} />
-        </FlexDiv>
-        <ButtonForm disabled={!this.state.title || !this.state.text} onClick={() => this.clickHandler(this.state)}> Сохранить </ButtonForm>
+        <FormWrapper>
+          <LightTitle left="50px">{this.isEmpty ? 'Создание' : 'Редактирование'} новости</LightTitle>
+          <FlexDiv>
+            <StyledLabel to="Title"> Название </StyledLabel>
+            <StyledInput onChange={(e) => this.handleChanges(e, 'title')} placeholder="title" id="Title" value={this.state.title} />
+          </FlexDiv>
+          <FlexDiv>
+            <StyledLabel to="Text"> Описание</StyledLabel>
+            <StyledTextArea onChange={(e) => this.handleChanges(e, 'text')} placeholder="text" value={this.state.text} />
+          </FlexDiv>
+          <ButtonForm disabled={!this.state.title || !this.state.text} onClick={() => this.clickHandler(this.state)}> Сохранить </ButtonForm>
+        </FormWrapper>
       </MainWrapper>
     );
   }

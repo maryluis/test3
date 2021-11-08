@@ -45,7 +45,7 @@ max-width: 700px;
 export const MainWrapper = styled.div`
 position: relative;
 display: flex;
-justify-content: space-around; 
+justify-content: ${props => props.justify || 'space-around'}; ; 
 flex-direction: ${props => props.direction || 'auto'}; 
 align-items: ${props => props.align || 'space-sround'}; 
 padding: 20px;
@@ -59,11 +59,13 @@ width: 100%;\
 `;
 export const StyledMain = styled.main`
 min-height: calc(100vh - 40px);
+display: flex;
+justify-content: center;
 background-color: ${props => props.color || props.theme.colors.primaryDark};
 overflow: hidden;
 `;
 
-export const Video = styled.video`
+export const Iframe = styled.iframe`
 width: 300px;
 height: 250px;
 padding: 0px 5px 0px 0px;
@@ -73,6 +75,7 @@ export const CardDiv = styled.div`
 display: flex;
 flex-direction: column;
 width: 400px;
+max-height: 400px;
 background-color: ${props => props.color || props.theme.colors.primaryLight};
 color: ${props => props.color || props.theme.colors.primaryDark};
 margin: 10px;
@@ -133,4 +136,11 @@ max-width: 120px;
 export const LightTitle = styled.h3`
 color: ${props => props.color || props.theme.colors.primaryLight};
 position: relative;
+`;
+
+export const FormWrapper = styled.div`
+width: 500px;
+display: flex;
+flex-direction: column;
+align-items: center
 `;

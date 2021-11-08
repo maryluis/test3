@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { actionGetData, actionSaveData } from '../../reduxDir';
 import { MainWrapper, CardDiv, DarkText, DarkTitle, ButtonForm } from '.';
+import * as _ from 'lodash'
 
 export class NewsPage extends React.Component {
   constructor(props) {
@@ -21,9 +22,9 @@ export class NewsPage extends React.Component {
 
   render() {
     return (
-      <MainWrapper direction="space-around">
+      <MainWrapper justify="center">
         {this.props.news.map((s) => (
-          <CardDiv key={s.id}><DarkTitle>{s.title}</DarkTitle><DarkText>{s.text}</DarkText><ButtonForm onClick={() => this.clickHandler(s)}>Редактировать</ButtonForm></CardDiv>
+          <CardDiv key={s.id}><DarkTitle>{s.title}</DarkTitle><DarkText>{ s.text}</DarkText><ButtonForm onClick={() => this.clickHandler(s)}>Редактировать</ButtonForm></CardDiv>
         ))}
       </MainWrapper>
     );
