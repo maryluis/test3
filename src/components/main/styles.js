@@ -22,7 +22,7 @@ border: 3px solid ${props => props.color || props.theme.colors.primaryLight};
 &:hover {
     animation: ${rotateAnima} 1s infinite linear;
 }
-@media (max-width: 650px) {
+@media (max-width: 1050px) {
     position: static;
     margin-top: 50px;
   }
@@ -55,7 +55,7 @@ box-sizing: border-box;
 min-height: 400px;
 background-color: ${props => props.color || props.theme.colors.primaryDark};
 width: 100%;\
-@media (max-width: 650px) {
+@media (max-width: 1100px) {
     flex-wrap: wrap;
   }
   @media (max-width: 400px) {
