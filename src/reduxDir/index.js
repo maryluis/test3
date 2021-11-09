@@ -13,4 +13,6 @@ export const store = createStore(combineReducers({
 
 SagaMiddleware.run(rootSaga);
 
-export { actionChangeTheme, formReducer, actionSaveData, actionDeleteData, SAVE_DATA, DELETE_DATA, GET_NEWS, actionGetData, actionPutData, actionPutNewTheme, CHANGE_THEME, PUT_CHANGE_THEME };
+export { actionChangeTheme, formReducer, actionSaveData, actionDeleteData,
+  SAVE_DATA, DELETE_DATA, GET_NEWS, actionGetData, actionPutData,
+  actionPutNewTheme, CHANGE_THEME, PUT_CHANGE_THEME };

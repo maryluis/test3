@@ -23,7 +23,11 @@ export class NewsPage extends React.Component {
     return (
       <MainWrapper justify="center">
         {this.props.news.map((s) => (
-          <CardDiv key={s.id}><DarkTitle>{s.title}</DarkTitle><DarkText>{ s.text}</DarkText><ButtonForm onClick={() => this.clickHandler(s)}>Редактировать</ButtonForm></CardDiv>
+          <CardDiv key={s.id}>
+            <DarkTitle>{s.title}</DarkTitle>
+            <DarkText>{ s.text}</DarkText>
+            <ButtonForm onClick={() => this.clickHandler(s)}>Редактировать</ButtonForm>
+          </CardDiv>
         ))}
       </MainWrapper>
     );

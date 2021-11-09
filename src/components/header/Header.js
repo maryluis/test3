@@ -1,4 +1,3 @@
-import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { HeaderWrapper, HeaderLink, ButtonStyledHeader } from '.';
@@ -17,9 +16,13 @@ export class Header extends React.Component {
     return (
       <HeaderWrapper>
         <HeaderWrapper>
-          {this.links.map((item) => <HeaderLink key={item.label} to={item.link}>{item.label}</HeaderLink>)}
+          {this.links.map((item) => (
+            <HeaderLink key={item.label} to={item.link}>{item.label}
+            </HeaderLink>
+          ))}
         </HeaderWrapper>
-        <ButtonStyledHeader onClick={() => this.props.changeTheme(this.props.theme)}> Change Theme </ButtonStyledHeader>
+        <ButtonStyledHeader onClick={() => this.props.changeTheme(this.props.theme)}> Change Theme
+        </ButtonStyledHeader>
       </HeaderWrapper>
     );
   }

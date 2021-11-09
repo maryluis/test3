@@ -32,10 +32,10 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': 0,
     'react/prefer-stateless-function': 0,
     'import/no-cycle': 0,
-    'max-len': 0,
     'react/destructuring-assignment': 0,
     'react/prop-types': 0,
     'no-underscore-dangle': 0,
     'react/no-access-state-in-setstate': 0,
+    'react/react-in-jsx-scope': 0,
   },
 };
